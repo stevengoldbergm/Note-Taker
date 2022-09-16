@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 const { nextTick } = require('process');
+const { parse } = require('path');
 
 // Promisify the fs.readfile method
 const readFile = util.promisify(fs.readFile);
@@ -19,16 +20,32 @@ router.get('/api/notes', (req, res) => {
 });
 
 // POST Router
-router.post('/api/notes', (req, res) => {
+router.post('/api/notes/', (req, res) => {
     console.info(req.body);
-    console.info('database POST complete! (though not really)')
+
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            const parsedData = JSON.parse(data);
+            // console.log('Parsed Data Before Push', parsedData); // Working
+            parsedData.push(req.body);
+            fs.writeFile('./db/db.json', JSON.stringify(parsedData, null, 4), (err) =>
+            err ? console.error(err) : console.info(`Data written to ./db/db.json`));
+            // console.log('Parsed Data After Push', parsedData); // Working
+
+        }
+    })
+
+    console.info('database POST complete!')
 })
 
-// DELETE Router // This probably works, but I don't want to delete my demo
-// router.delete('/api/notes', (req, res) => {
-//     console.info(req.body);
-//     console.info('database DELETE complete!')
-// })
+// DELETE Router 
+router.delete('/api/notes/:id', (req, res) => {
+    console.info(req.body);
+    // Add in a code just like the POST code, but it needs to delete the specific entry from the array
+    console.info('database DELETE complete!')
+})
 
 
 module.exports = router;
