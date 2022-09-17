@@ -28,6 +28,8 @@ To use Note Taker, simply navigate from the landing page to the notes page, and 
 
 Click the plus sign to make a new note, click the note titles that generate to review what you've written, and click the red trashcan to dump old notes in the bin!
 
+You can try out the working app [HERE!](https://note-taker-sgm86.herokuapp.com/notes)
+
 ## Questions
 
 For more information, feel free to contact me:
