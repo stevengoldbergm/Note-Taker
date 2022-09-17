@@ -64,6 +64,7 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
   }
+
 };
 
 const handleNoteSave = () => {
@@ -84,9 +85,9 @@ const handleNoteDelete = (e) => {
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  console.info('noteID: ', noteId);
+  console.info('activeNote.id: ', activeNote.id);
 
-  console.log(activeNote.id);
-  console.log(noteId);
 
   if (activeNote.id === noteId) {
     activeNote = {};
@@ -101,8 +102,8 @@ const handleNoteDelete = (e) => {
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
-  console.log('trying to view note')
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
+  console.info('activityNote.id:', activeNote.id);
   renderActiveNote();
 };
 
@@ -122,7 +123,12 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
+  console.log('renderNoteList start') // Start script
+
   let jsonNotes = await notes.json();
+
+  console.log('Checking window location:', window.location.pathname) // Is this correct?
+
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }

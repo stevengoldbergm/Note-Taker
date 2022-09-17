@@ -1,35 +1,17 @@
 [
     {
-        "title": "Note Test Title",
-        "text": "This is a testttt"
+        "title": "Instructions (locked)",
+        "text": "Click the plus button to start a new note.\n\nWhen you see 'Note Title' and 'Note Text' populate their respective fields, can click on them to enter text into the fields freely.\n\nOnce text has been entered, click the floppy disk icon to save your note.\n\nYour note's title will populate into the column on the left. If you wish to view your note again, simply click the title.\n\nIf you ever wish to delete a note, click the red trashcan icon visible to the right of the note's title. ",
+        "id": 1234
     },
     {
-        "title": "Testy Test",
-        "text": "Testing again",
-        "id": "2"
+        "title": "New Note",
+        "text": "It's a me, a note!",
+        "id": "4a97"
     },
     {
-        "title": "Another Test",
-        "text": "Yet another one, full of junk and sass"
-    },
-    {
-        "title": "Trying again",
-        "text": "and again"
-    },
-    {
-        "title": "Junkman",
-        "text": "He comes"
-    },
-    {
-        "title": "Come On",
-        "text": "I want this to workkk"
-    },
-    {
-        "title": "And another",
-        "text": "and another"
-    },
-    {
-        "title": "Last Try",
-        "text": "This should work..."
+        "title": "Test Note",
+        "text": "I'm a testin' my notes!",
+        "id": "789c"
     }
 ]

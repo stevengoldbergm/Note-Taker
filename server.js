@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.static('public'));
 
 // Import routers
-app.use('/', apiRouter);
+app.use('/', apiRouter); // I could use /api here, but then I need to change the reference in the router
 app.use('/', htmlRouter);  
 
 // Starting server on PORT
