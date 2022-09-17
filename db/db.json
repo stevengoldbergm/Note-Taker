@@ -5,13 +5,13 @@
         "id": 1234
     },
     {
-        "title": "New Note",
-        "text": "It's a me, a note!",
-        "id": "4a97"
+        "title": "Do something fun!",
+        "text": "I am not a fun person. This note is a lie.",
+        "id": "aaaf"
     },
     {
-        "title": "Test Note",
-        "text": "I'm a testin' my notes!",
-        "id": "789c"
+        "title": "Eat a healthy lunch!",
+        "text": "Or a pizza? \n\nWho says health needs to be defined by calories and macros?",
+        "id": "bfc1"
     }
 ]
