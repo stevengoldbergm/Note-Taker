@@ -8,5 +8,10 @@
         "title": "Eat a healthy lunch!",
         "text": "Or a pizza? \n\nWho says health needs to be defined by calories and macros?",
         "id": "bfc1"
+    },
+    {
+        "title": "Delete Me!",
+        "text": "The delete function works!",
+        "id": "d3c7"
     }
 ]
