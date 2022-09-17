@@ -1,7 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 
-// Create our routes
+// ---------------- Routes for HTMLs ---------------- //
 
 // Route for notes.html
 router.get('/notes', (req, res) => {
@@ -9,7 +9,6 @@ router.get('/notes', (req, res) => {
 });
 
 // Create route to send back to home page if they don't go to notes
-
 router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 });

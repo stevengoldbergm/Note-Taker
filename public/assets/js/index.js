@@ -85,8 +85,8 @@ const handleNoteDelete = (e) => {
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
-  console.info('noteID: ', noteId);
-  console.info('activeNote.id: ', activeNote.id);
+  // console.info('noteID: ', noteId);
+  // console.info('activeNote.id: ', activeNote.id);
 
 
   if (activeNote.id === noteId) {
@@ -103,7 +103,7 @@ const handleNoteDelete = (e) => {
 const handleNoteView = (e) => {
   e.preventDefault();
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
-  console.info('activityNote.id:', activeNote.id);
+  // console.info('activityNote.id:', activeNote.id);
   renderActiveNote();
 };
 
@@ -123,11 +123,11 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  console.log('renderNoteList start') // Start script
+  // console.log('renderNoteList start') // Start script Works
 
   let jsonNotes = await notes.json();
 
-  console.log('Checking window location:', window.location.pathname) // Is this correct?
+  // console.log('Checking window location:', window.location.pathname) // Is this correct? Yes!
 
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));

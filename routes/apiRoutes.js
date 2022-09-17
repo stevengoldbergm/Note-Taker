@@ -75,7 +75,7 @@ router.delete('/api/notes/:id', (req, res) => {
             return parsedData
         } else {
             parsedData.splice(index, 1);
-            console.log(parsedData);
+            // console.log(parsedData); // Works
         
             // Overwrite the db.json file with new array
             fs.writeFile('./db/db.json', JSON.stringify(parsedData, null, 4), (err) => {
