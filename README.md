@@ -12,13 +12,13 @@
 
 ## Description
 
-A simple note-taking app that allows the user to store notes in a database for later use.
+A simple note-taking app that allows the user to dynamically update a notes database using express.js.
 
 ## Installation
 
 Follow the below steps to install the program:
 
-npm install
+        npm install
 
 ## Usage
 
